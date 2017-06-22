@@ -1,0 +1,30 @@
+<template name="ListEucaImages">
+  <h1>Eucalyptus Images List</h1>
+  {{#linkTo route="CreateEucaImage"}}Create New Eucalyptus Image{{/linkTo}}
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>File Name</th>
+        <th>Upload Status</th>
+        <th>Disease Type</th>
+        <th>Submitter</th>
+        <th>Submitted Date</th>
+        <th>Last Edit</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each euca_images}}
+        <tr>
+          <td>{{filename}}</td>
+          <td>{{uploaded}}</td>
+          <td>{{diseasetype}}</td>
+          <td>{{submitter}}</td>
+          <td>{{submit}}</td>
+          <td>{{lastedit}}</td>
+          <td>{{#linkTo route='EditEucaImage'}}<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{{/linkTo}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>
