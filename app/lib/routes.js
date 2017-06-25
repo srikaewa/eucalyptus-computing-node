@@ -74,7 +74,8 @@ Router.route( "getDiseaseType/:imageId", function() {
 
   if ( getImage ) {
     this.response.statusCode = 200;
-    this.response.end( getImage.diseasetype );
+    var res_end = '{"imageId":"' + getImage._id + '","diseasetype":"' + getImage.diseasetype + '", "stage":"' + getImage.stage + '","level":"' + getImage.level + '","lastedit":"' + getImage.lastedit + '","elapsetime":"'+ getImage.elapsetime + '"}';
+    this.response.end( res_end );
   } else {
     this.response.statusCode = 404;
     this.response.end( { status: "404", message: "Image not found." } );

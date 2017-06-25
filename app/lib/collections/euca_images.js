@@ -45,7 +45,17 @@ EucaImages.attachSchema(new SimpleSchema({
   diseasetype: {
     type: String,
     label: "Disease Type",
-    allowedValues: ['Cerco', 'Cryptos', 'Cylindro', 'Xantho','x','Disease Free'],
+    allowedValues: ['cerco', 'cryptos', 'cylindro', 'xantho','x','none'],
+  },
+  stage: {
+    type: String,
+    label: "Stage",
+    max: 20
+  },
+  level: {
+    type: String,
+    label: "Level",
+    max: 20
   },
   submitter: {
     type: String,
@@ -71,5 +81,10 @@ EucaImages.attachSchema(new SimpleSchema({
     type: String,
     label: "Longitude",
     max: 100
-  }  
+  },
+  elapsetime:{
+    type: String,
+    label: "Elapse Time",
+    max: 10
+  }
 }));
