@@ -75,7 +75,7 @@ Meteor.methods({
       console.log("Run classification process...");
       this.unblock();
       var future=new Future();
-      var command="~/edds/run_classifyEuca.sh /usr/local/MATLAB/MATLAB_Runtime/v92/ ~/uploads/"+ filename + " " + imageId +" http://localhost:3000/eddsapi/euca_images/";
+      var command="~/edds/run_classifyEuca.sh /usr/local/MATLAB/MATLAB_Runtime/v92/ ~/uploads/"+ filename + " " + imageId +" http://localhost:9099/eddsapi/euca_images/";
       exec(command,function(error,stdout,stderr){
         if(error){
           console.log(error);
